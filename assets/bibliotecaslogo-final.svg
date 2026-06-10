@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 80" fill="none">
+  <!-- Ícono Arquitectónico de Biblioteca -->
+  <g transform="translate(15, 20)">
+    <!-- Base -->
+    <path d="M0,35 L40,35" stroke="#141414" stroke-width="4" stroke-linecap="round"/>
+    <path d="M4,30 L36,30" stroke="#141414" stroke-width="3" stroke-linecap="round"/>
+    <!-- Techo Frontón -->
+    <path d="M20,0 L0,15 L40,15 Z" fill="#141414"/>
+    <!-- Columnas -->
+    <rect x="6" y="15" width="4" height="15" fill="#141414"/>
+    <rect x="14" y="15" width="4" height="15" fill="#141414"/>
+    <rect x="22" y="15" width="4" height="15" fill="#141414"/>
+    <rect x="30" y="15" width="4" height="15" fill="#141414"/>
+  </g>
+
+  <!-- Tipografía -->
+  <text x="65" y="42" font-family="'Outfit', system-ui, sans-serif" font-weight="900" font-size="32" fill="#141414" letter-spacing="-0.02em">STUDIO</text>
+  <text x="67" y="60" font-family="'Outfit', system-ui, sans-serif" font-weight="600" font-size="14" fill="#3F7F88" letter-spacing="0.12em" text-transform="uppercase">BIBLIOTECA</text>
+</svg>

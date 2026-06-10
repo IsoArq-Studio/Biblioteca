@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 86" role="img" aria-label="Biblioteca Studio">
+  <g fill="none" stroke="#4a8a87" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 10h26v58H10z"/>
+    <path d="M24 20h28v48H24z"/>
+    <path d="M38 30h30v38H38z"/>
+    <path d="M52 40h58v28H52z"/>
+    <path d="M10 68h100"/>
+  </g>
+  <text x="126" y="34" font-family="Georgia, 'Times New Roman', serif" font-size="24" fill="#4a8a87">Studio</text>
+  <text x="126" y="62" font-family="Outfit, Arial, sans-serif" font-size="18" font-weight="700" fill="#8f9290">Biblioteca</text>
+</svg>

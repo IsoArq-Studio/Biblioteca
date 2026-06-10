@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 150" preserveAspectRatio="xMinYMid meet" role="img" aria-labelledby="title desc">
+  <title id="title">IsoArq Studio Biblioteca</title>
+  <desc id="desc">Logotipo de IsoArq Studio Biblioteca con icono lineal de libros</desc>
+  <rect width="430" height="150" fill="none"/>
+  <g fill="none" stroke="#3f8188" stroke-width="6.5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M22 28v94h128V65h-42V48H83V37H57V28H22Z"/>
+    <path d="M57 37v72h93"/>
+    <path d="M83 48v52h67"/>
+    <path d="M108 65v35h42"/>
+    <path d="M22 122h128"/>
+  </g>
+  <text x="166" y="83" fill="#11110f" font-family="Outfit, Arial, sans-serif" font-size="48" font-weight="800">IsoArq</text>
+  <text x="288" y="55" fill="#3f8188" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="400">Studio</text>
+  <text x="169" y="106" fill="#8b8881" font-family="Outfit, Arial, sans-serif" font-size="14" font-weight="700">Biblioteca</text>
+</svg>

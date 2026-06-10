@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="IsoArq Biblioteca Studio: recursos de arquitectura. De un estudiante para otro.">
+<title>IsoArq Biblioteca Studio</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles.css?v=20260609-review-fix-v22">
+</head>
+<body>
+
+<!-- LOADER -->
+<div class="loader-overlay" id="loader">
+  <div class="spinner"></div>
+  <div class="loader-text">Sincronizando Biblioteca IsoArq...</div>
+  <div class="loader-sub">Preparando catalogo y recursos de arquitectura</div>
+</div>
+
+<header>
+  <!-- Menu hamburguesa para moviles -->
+  <label for="nav-toggle" class="hamburger">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+  </label>
+
+  <a class="logo logo-link logo-real-link" href="https://www.instagram.com/isoarq_studio/" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram de IsoArq">
+    <img class="logo-real-image" src="assets/LOGOBILIO-cropped.png?v=20260609-review-fix-v22" alt="IsoArq Studio Biblioteca">
+  </a>
+  <div class="hdiv"></div>
+  <div class="sw">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+    <input id="q" type="text" placeholder="Buscar en toda la base de datos...">
+  </div>
+  <div class="hstats">
+    <div class="hs"><b id="stT">0</b>archivos</div>
+    <div class="hs"><b id="stM">0</b>secciones</div>
+  </div>
+</header>
+
+<div class="layout">
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" style="display:none">
+  <aside>
+    <!-- 1. BIBLIOTECA -->
+    <div class="ni-parent open" onclick="toggleMenu('sub-biblio', this)" id="parent-biblio">
+      <span class="em" aria-hidden="true">&#9638;</span><span class="lb">Biblioteca</span><span class="chev" aria-hidden="true">&#9662;</span>
+    </div>
+    <div class="sub-menu open" id="sub-biblio">
+      <!-- Materias se inyectan aqui -->
+    </div>
+
+
+    <!-- Carpetas dinamicas -->
+    <div id="dynamic-parents"></div>
+  </aside>
+
+  <main>
+    <div id="content"></div>
+  </main>
+</div>
+
+<!-- MODAL PARA VER/DESCARGAR -->
+<div class="overlay" id="overlay" onclick="closeModal(event)">
+  <div class="modal" onclick="event.stopPropagation()">
+    <div class="mhd">
+      <div class="mhd-t" id="mTitle"></div>
+      <button class="btn" onclick="closeModal()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>Cerrar
+      </button>
+    </div>
+    <div class="mbody" id="mBody"></div>
+    <div class="mft">
+      <span class="mft-m" id="mMeta"></span>
+      <div class="br">
+        <a class="btn" id="mOpen" href="#" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Drive
+        </a>
+        <a class="btn btn-t" id="mDown" href="#" download>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Descargar
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <footer class="site-footer">
+    <span>IsoArq Studio - De un estudiante para otro</span>
+    <a href="https://www.instagram.com/isoarq_studio/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <span class="publish-check">Produccion: sin debug - cache versionado - Drive activo</span>
+  </footer>
+
+  <script src="src/config.js?v=20260609-review-fix-v22"></script>
+<script src="src/app.js?v=20260609-review-fix-v22"></script>
+
+<!-- SALVAVIDAS LOCAL: solo actua si Google no responde despues de un margen amplio -->
+  <script>
+    setTimeout(function() {
+      var loader = document.getElementById('loader');
+      if (window.isAppLoading && loader && !loader.classList.contains('hidden')) {
+        loader.classList.add('hidden');
+        var status = document.createElement('div');
+        status.className = 'app-status warn';
+        status.innerText = 'Google esta tardando mas de lo normal. Si no carga, abre la consola y revisa window.__ISOARQ_REMOTE_DIAG__.';
+        document.body.appendChild(status);
+        setTimeout(function(){ status.remove(); }, 6000);
+      }
+    }, 130000);
+  </script>
+</body>
+</html>
+
